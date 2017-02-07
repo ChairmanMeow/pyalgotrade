@@ -43,7 +43,7 @@ def main():
         with open(tmpFile.name, 'rb') as csvfile:
             symbolsXML = symbolsxml.Writer()
             for row in csv.DictReader(csvfile):
-                symbolsXML.addStock(row["Symbol"], row["Name"], row["Sector"], row["industry"])
+                symbolsXML.addStock(row["Symbol"], row["Name"], row["Sector"], row["Industry"])
 
         logger.info("Writing nasdaq.xml")
         symbolsXML.write("nasdaq.xml")
